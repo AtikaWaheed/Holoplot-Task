@@ -1,34 +1,41 @@
+## Setup Instructions
 
-# Pre reqs:
+### Prerequisites
 
-1- Install NodeJS and NPM
+- Docker installed on your machine
 
-# Running Tests:
+### Steps
 
-1- Go to the root directory of the project.
+1. Clone or Download the Repository
 
-First Approach: 
-    Copy Pakcage jason file and run command `npm install`  // This will install all dependencies
+    git clone https://github.com/AtikaWaheed/Holoplot-Task.git
+    OR
+    Extract the zip file
 
-Second Approach: 
+2. Open a terminal and navigate to the extracted directory.
 
-2- Let’s start by creating the package.json
+    ```sh
+    cd Holoplot-Project
+    ```
 
-        npm init -y         // This will create a package.json file
+3. Build the Docker image:
 
-3- Install Node.js packages
+    ```sh
+    docker build -t cypress-performance-test .
+    ```
 
-       $ npm install
+4. Run the tests:
 
-4- Install Cypress (Refer package jason for version)
+    ```sh
+    docker run --rm cypress-performance-test
+    ```
 
-      npm install cypress
+This will build the Docker image and run the Cypress tests in a container.
 
-5- In order to execute all tests, run command
+## Test Details
 
-    npx cypress run --spec "/cypress/e2e/performanceTest.cy.js"
+The test checks the performance of the Three.js example at `https://threejs.org/examples/#webgl_instancing_performance`.
 
-# Note: For Live Browser Execution:
-    npx cypress open   
+### Test File
 
-    Click on test file which is `flightPageTestCases.js`
+- `cypress/e2e/performanceTest.cy.js`: Contains the Cypress test script.
