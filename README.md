@@ -1,16 +1,11 @@
-## Setup Instructions
 
-### Prerequisites
+# Pre reqs:
 
-- Docker installed on your machine
+1- Install NodeJS and NPM
 
-### Steps
+# Running Tests:
 
-1. Clone or Download the Repository
-
-    git clone https://github.com/AtikaWaheed/Holoplot-Task.git
-    OR
-    Extract the zip file
+1- Go to the root directory of the project.
 
 2. Open a terminal and navigate to the extracted directory.
 
